@@ -1,4 +1,4 @@
-site.hugo
+site-hugo
 =========
 
 Source code for personal website
