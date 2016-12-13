@@ -1,0 +1,8 @@
+# Emacs backup files
+*~
+.*~
+
+# macOS files
+.DS*
+
+public

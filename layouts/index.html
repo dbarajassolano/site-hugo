@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+
+<section id="main">
+  <div>
+    {{ range .Data.Pages }}
+        {{ .Render "pageview"}}
+    {{ end }}
+  </div>
+</section>
