@@ -5,4 +5,8 @@
 # macOS files
 .DS*
 
+# References in CSL YAML format
+data/refs.yaml
+
+# Output
 public
