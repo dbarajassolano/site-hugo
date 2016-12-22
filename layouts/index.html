@@ -3,27 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>David Barajas-Solano</title>
+    {{ partial "head_includes.html" . }}
   </head>
   <body>
-    <section id="main">
+    <section id="pages">
       <div>
 	{{ range .Data.Pages }}
         {{ .Render "pageview" }}
 	{{ end }}
       </div>
-      <section id="refs">
-	<h1 id="title">Publications</h1>
-	<div>
-	  <ul>
-	    {{ range .Site.Data.refs.references }}
-	    <li> {{ range .author }}
-	      {{ .family }}, {{ .given -}},
-	      {{ end }} {{ .title }}, {{ index . "container-title" }}, {{ .volume }}({{ .issue }}):{{ .page }}, {{ range .issued }} {{- .year }} {{ end }}
-	    </li>
-	    {{ end }}
-	  </ul>
-	</div>
-      </section>
+    </section>
+    <section id="refs">
+      <h1 id="title">Publications</h1>
+      <div>
+	<ul>
+	  {{ range .Site.Data.refs.references }}
+	  <li> {{ range .author }}
+	    {{ .family }}, {{ .given -}},
+	    {{ end }} <em>{{ .title }}</em>, {{ index . "container-title" }}, {{ .volume }}({{ .issue }}):{{ .page }}, {{ range .issued }} {{- .year }} {{ end }}
+	  </li>
+	  {{ end }}
+	</ul>
+      </div>
     </section>
   </body>
 </html>

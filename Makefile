@@ -18,6 +18,7 @@ site:	clean refs
 
 share:
 	gsutil acl ch -u AllUsers:R gs://$(BUCKET)/index.html
+	gsutil acl ch -u AllUsers:R gs://$(BUCKET)/css/styles.css
 
 assign:	deploy share
 	gsutil web set -m index.html gs://$(BUCKET)
