@@ -1,19 +1,25 @@
 PUBLIC_DIR = public/
-BUCKET = www.dbarajassolano.com
+BUCKET     = www.dbarajassolano.com
+REFS_BIB   = data/refs.bib
+REFS_YAML  = data/refs.yaml
 
+.PHONY: deploy refs site share assign clean
 
-all: deploy
+all:	assign
 
 deploy: site
-	gsutil rsync -R $(PUBLIC_DIR) gs://$(BUCKET)
+	gsutil -m rsync -R $(PUBLIC_DIR) gs://$(BUCKET)
 
-site:	clean
+refs:
+	pandoc-citeproc -y $(REFS_BIB) &> $(REFS_YAML)
+
+site:	clean refs
 	hugo
 
 share:
 	gsutil acl ch -u AllUsers:R gs://$(BUCKET)/index.html
 
-assign:
+assign:	deploy share
 	gsutil web set -m index.html gs://$(BUCKET)
 
 clean:

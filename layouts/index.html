@@ -1,9 +1,29 @@
 <!DOCTYPE html>
-
-<section id="main">
-  <div>
-    {{ range .Data.Pages }}
-        {{ .Render "pageview"}}
-    {{ end }}
-  </div>
-</section>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>David Barajas-Solano</title>
+  </head>
+  <body>
+    <section id="main">
+      <div>
+	{{ range .Data.Pages }}
+        {{ .Render "pageview" }}
+	{{ end }}
+      </div>
+      <section id="refs">
+	<h1 id="title">Publications</h1>
+	<div>
+	  <ul>
+	    {{ range .Site.Data.refs.references }}
+	    <li> {{ range .author }}
+	      {{ .family }}, {{ .given -}},
+	      {{ end }} {{ .title }}, {{ index . "container-title" }}, {{ .volume }}({{ .issue }}):{{ .page }}, {{ range .issued }} {{- .year }} {{ end }}
+	    </li>
+	    {{ end }}
+	  </ul>
+	</div>
+      </section>
+    </section>
+  </body>
+</html>
