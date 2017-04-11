@@ -1,0 +1,9 @@
+<li>
+  {{ range .Params.author }}
+  {{ .family }}, {{ .given -}},
+  {{ end }}
+  {{.Params.issued.year}}.
+  <a href="{{ .Permalink }}">{{ .Title }}</a>,
+  <em>{{ .Params.journal }}, {{ .Params.volume }}</em>({{ .Params.issue }}):
+  {{ .Params.page }}
+</li>

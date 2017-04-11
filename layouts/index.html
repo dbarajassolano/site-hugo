@@ -7,23 +7,29 @@
   </head>
   <body>
     <section id="pages">
+      {{ range $section, $pages := .Site.Sections }}
+      {{ if eq $section "pages" }}
+      {{ range $pages.Pages }}
+      <h1 id="title">{{ .Title }}</h1>
       <div>
-	{{ range .Data.Pages }}
-        {{ .Render "pageview" }}
-	{{ end }}
+	{{ .Content }}
       </div>
+      {{ end }}
+      {{ end }}
+      {{ end }}
     </section>
-    <section id="refs">
-      <h1 id="title">Publications</h1>
+    <section id="publications">
+      <h1 id="title">Journal articles</h1>
+      {{ range $section, $pages := .Site.Sections }}
+      {{ if ne $section "pages" }}
+      <ul id="list">
+	{{ range $pages.Pages }}
+	{{ .Render "li"}}
+	{{ end }}
+      </ul>
+      {{ end }}
+      {{ end }}
       <div>
-	<ul>
-	  {{ range .Site.Data.refs.references }}
-	  <li> {{ range .author }}
-	    {{ .family }}, {{ .given -}},
-	    {{ end }} <em>{{ .title }}</em>, {{ index . "container-title" }}, {{ .volume }}({{ .issue }}):{{ .page }}, {{ range .issued }} {{- .year }} {{ end }}
-	  </li>
-	  {{ end }}
-	</ul>
       </div>
     </section>
   </body>
