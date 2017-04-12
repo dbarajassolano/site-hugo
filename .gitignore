@@ -7,3 +7,6 @@
 
 # Output
 public
+
+# Netlify configuration
+.netlify

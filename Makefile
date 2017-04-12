@@ -1,27 +1,13 @@
-PUBLIC_DIR = public/
-BUCKET     = www.dbarajassolano.com
-REFS_BIB   = data/refs.bib
-REFS_YAML  = data/refs.yaml
+.PHONY: deploy site clean
 
-.PHONY: deploy refs site share assign clean
-
-all:	assign
+all:	deploy
 
 deploy: site
-	gsutil -m rsync -R $(PUBLIC_DIR) gs://$(BUCKET)
+	netlify deploy
 
-refs:
-	pandoc-citeproc -y $(REFS_BIB) &> $(REFS_YAML)
-
-site:	clean refs
+site:	clean
 	hugo
-
-share:
-	gsutil acl ch -u AllUsers:R gs://$(BUCKET)/index.html
-	gsutil acl ch -u AllUsers:R gs://$(BUCKET)/css/styles.css
-
-assign:	deploy share
-	gsutil web set -m index.html gs://$(BUCKET)
 
 clean:
 	rm -rf public/
+
