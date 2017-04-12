@@ -1,9 +1,7 @@
 <li>
-  {{ range .Params.author }}
-  {{ .family }}, {{ .given -}},
-  {{ end }}
-  {{.Params.year}}.
+  {{- range $i, $e := .Params.author }}{{if $i}}, {{end}}{{- .family }}, {{ .given }}{{end}}
+  ({{.Params.year}}).
   <a href="{{ .Permalink }}">{{ .Title }}</a>,
-  <em>{{ .Params.journal }}, {{ .Params.volume }}</em>({{ .Params.issue }}):
-  {{ .Params.page }}
+  <em>{{ .Params.journal }}, {{ .Params.volume }}</em>({{ .Params.issue }}),
+  {{ .Params.pages }}.
 </li>

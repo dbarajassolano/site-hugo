@@ -1,19 +1,10 @@
 +++
-id = ""
-title = ""
+title   = ""
+id      = ""
 journal = ""
-page = ""
-volume = ""
-issue = ""
-URL = ""
-DOI = ""
-
-[[author]]
-family = ""
-given = ""
-
-[issued]
-year = ""
-month = ""
-
-+++k
+page    = ""
+volume  = ""
+issue   = ""
+year    = ""
+DOI     = ""
++++
