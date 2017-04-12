@@ -3,6 +3,7 @@
     <head>
 	<meta charset="utf-8">
 	<title>David Barajas-Solano</title>
+	{{ partial "katex_includes.html" . }}
 	{{ partial "head_includes.html" . }}
     </head>
     <body>
@@ -29,5 +30,7 @@
 	    <div>
 	    </div>
 	</section>
+	{{ partial "foot.html" . }}
+	{{ partial "katex_render_in_body.html" . }}
     </body>
 </html>
