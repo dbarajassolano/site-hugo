@@ -1,11 +1,20 @@
-{{ partial "head_includes.html" . }}
-<section id="main">
-  <div>
-    <h1 id="title">Journal articles</h1>
-    <ul id="list">
-      {{ range .Data.Pages }}
-      {{ .Render "li"}}
-      {{ end }}
-    </ul>
-  </div>
-</section>
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<title>{{ .Title }}</title>
+	{{ partial "head_includes.html" . }}
+    </head>
+    <body>
+	<section id="main">
+	    <div>
+		<h1 id="title">Journal articles</h1>
+		<ul id="list">
+		    {{ range .Data.Pages }}
+			{{ .Render "li"}}
+		    {{ end }}
+		</ul>
+	    </div>
+	</section>
+    </body>
+</html>
