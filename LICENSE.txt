@@ -1,4 +1,4 @@
-Everything in "/content/" is copyright, David A. Barajas-Solano.  All rights reserved.
+Copyright to journal article abstracts in "/content/" is held by the respective journal.  Everything else "/content/" is copyright, David A. Barajas-Solano.  All rights reserved.
 
 Everything else is under the following license (MIT):
 Copyright (c) 2016 David A. Barajas-Solano
