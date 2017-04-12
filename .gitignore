@@ -5,9 +5,5 @@
 # macOS files
 .DS*
 
-# Content and data
-data
-content/*/*.md
-
 # Output
 public
