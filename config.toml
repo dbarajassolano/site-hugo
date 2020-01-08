@@ -1,6 +1,4 @@
 title = "David Barajas-Solano"
 baseurl = "https://www.dbarajassolano.com"
 languageCode = "en-us"
-disableKinds = ["section", "taxonomyTerm"]
-[params]
-	mainSections = ["articles"]
+disableKinds = ["taxonomy", "taxonomyTerm"]

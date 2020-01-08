@@ -13,7 +13,7 @@ Research Interests
 
 - *Applied and computational mathematics*
 
-	Multiscale and multifidelity modeling, hybrid modeling, structured grid methods for conservation equations, uncertainty quantification, stochastic differential and partial differential equations, differential algebraic equations
+	Multiscale and multifidelity modeling, hybrid modeling, structured grid methods for conservation equations, uncertainty quantification, stochastic differential and partial differential equations
 
 - *Groundwater hydrology*
 

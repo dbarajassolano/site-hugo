@@ -6,14 +6,10 @@
 	<section id="about">
 	    {{ .Content }}    
 	</section>
-	<section id="articles">
-	    <h1 id="title">Journal articles</h1>
-	    <ul id="list">
-		{{/* range .Pages */}}
-		{{ range where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
-		    {{ .Render "li"}}
-		{{ end }}
-	    </ul>
-	</section>
+	<div>
+	    {{ range .Pages }}
+		{{ .Render "list" }}
+	    {{ end }}
+	</div>
     </main>
 {{ end }}
