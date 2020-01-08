@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-	<meta charset="utf-8">
-	<title>{{ .Title }}</title>
-	{{ partial "katex_includes.html" . }}
-	{{ partial "head_includes.html" . }}
-    </head>
-    <body>
-	<section id="main">
+{{ define "title" }}
+    {{ .Title }}
+{{ end }}
+
+{{ define "main" }}
+    <main role="main">
+	<header>
 	    <h1 id="title">{{ .Title }}</h1>
 	    <p><a href="https://doi.org/{{ .Params.DOI }}"><em>{{- .Params.DOI -}}</em></a></p>
-	    <section>
-		<h2 id="abstract">Abstract</h2>
-		{{ .Content }}
-	    </section>
-	    <section>
-		<h2 id="BibTeX">BibTeX entry</h2>
-		<pre><code>
+	</header>
+	<section id="abstract">
+	    <h2 id="abstract">Abstract</h2>
+	    {{ .Content }}
+	</section>
+	<section id="BibTeX">
+	    <h2 id="BibTeX">BibTeX entry</h2>
+	    <pre><code>
 @article{ {{- .Params.id}},
     title =     { {{- .Title -}} },
     author =    { {{- range $i, $e := .Params.author }}{{if $i}} and {{end}}{{- .family }}, {{ .given }}{{end -}} },
@@ -27,11 +25,7 @@
     year =      { {{- .Params.year -}} },
     doi =       { {{- .Params.DOI -}} },
 }
-		</code></pre>
-	    </section>
+	    </code></pre>
 	</section>
-	{{ partial "foot.html" . }}
-	{{ partial "katex_render_in_body.html" . }}
-    </body>
-</html>
-    
+    </main>
+{{ end }}

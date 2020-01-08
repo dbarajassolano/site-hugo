@@ -1,36 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-	<meta charset="utf-8">
-	<title>David Barajas-Solano</title>
-	{{ partial "katex_includes.html" . }}
-	{{ partial "head_includes.html" . }}
-    </head>
-    <body>
-	<section id="pages">
-	    {{ range $section, $pages := .Site.Sections }}
-		{{ if eq $section "pages" }}
-		    {{ range $pages.Pages }}
-			{{ .Render "frontpageview" }}
-		    {{ end }}
-		{{ end }}
-	    {{ end }}
+{{ define "main" }}
+    <main role="main">
+	<header>
+	    <h1 id="title">{{.Title}}</h1>
+	</header>
+	<section id="about">
+	    {{ .Content }}    
 	</section>
-	<section id="publications">
+	<section id="articles">
 	    <h1 id="title">Journal articles</h1>
-	    {{ range $section, $pages := .Site.Sections }}
-		{{ if ne $section "pages" }}
-		    <ul id="list">
-			{{ range $pages.Pages }}
-			    {{ .Render "li"}}
-			{{ end }}
-		    </ul>
+	    <ul id="list">
+		{{/* range .Pages */}}
+		{{ range where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+		    {{ .Render "li"}}
 		{{ end }}
-	    {{ end }}
-	    <div>
-	    </div>
+	    </ul>
 	</section>
-	{{ partial "foot.html" . }}
-	{{ partial "katex_render_in_body.html" . }}
-    </body>
-</html>
+    </main>
+{{ end }}

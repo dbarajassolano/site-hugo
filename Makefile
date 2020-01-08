@@ -1,12 +1,18 @@
+HUGO=~/go/bin/hugo
+NETLIFY=~/node_modules/netlify-cli/bin/run
+
 .PHONY: deploy site clean
 
 all:	deploy
 
+test: 	site
+	$(NETLIFY) deploy
+
 deploy: site
-	netlify deploy
+	$(NETLIFY) deploy --prod
 
 site:	clean
-	hugo
+	$(HUGO)
 
 clean:
 	rm -rf public/
