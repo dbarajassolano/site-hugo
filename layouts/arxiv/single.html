@@ -1,0 +1,29 @@
+{{ define "title" }}
+    {{ .Title }}
+{{ end }}
+
+{{ define "main" }}
+    <main role="main">
+	<header>
+	    <h1 id="title">{{ .Title }}  with type {{ .Type }} </h1>
+	    <p><a href="http://arxiv.org/abs/{{ .Params.eprint }}"><em>arxiv.org/abs/{{- .Params.eprint -}}</em></a></p>
+	</header>
+	<section id="abstract">
+	    <h2 id="abstract">Abstract</h2>
+	    {{ .Content }}
+	</section>
+	<section id="BibTeX">
+	    <h2 id="BibTeX">BibTeX entry</h2>
+	    <pre><code>
+@article{ {{- .Params.id}},
+    title =         { {{- .Title -}} },
+    author =        { {{- range $i, $e := .Params.author }}{{if $i}} and {{end}}{{- .family }}, {{ .given }}{{end -}} },
+    eprint =        { {{- .Params.eprint -}} },
+    archivePrefix = {arxiv},
+    primaryClass =  { {{- .Params.primaryClass -}} },
+    year =          { {{- .Params.year -}} }
+}
+	    </code></pre>
+	</section>
+    </main>
+{{ end }}

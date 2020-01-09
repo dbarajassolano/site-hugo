@@ -6,25 +6,21 @@ body {
     width: 80%;
     padding: 20px;
     margin: 0 auto;
+    font-family: 'IBM Plex Serif', serif;
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 2em 0 0 0;
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
     margin: 1.5em 0 0 0;
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
-}
-
 li {
-    font-family: 'Robot', sans-serif;
     margin: 0 0 1.0em 0;
 }
 

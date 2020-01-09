@@ -7,6 +7,7 @@ volume  = "93"
 issue   = "5"
 DOI     = "10.1103/PhysRevE.93.052121"
 journal = "Phys. Rev. E"
+type    = "article"
 date    = "2017-04-11T10:41:29-07:00"
 
 [[author]]

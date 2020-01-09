@@ -1,14 +1,11 @@
 {{ define "main" }}
     <main role="main">
 	<header>
-	    <h1 id="title">{{.Title}}</h1>
+	    <h1 id="title">{{ .Title }}</h1>
 	</header>
-	<section id="about">
-	    {{ .Content }}    
-	</section>
 	<section>
 	    {{ range .Pages }}
-		{{ .Render "list" }}
+		{{ .Render "sublist" }}
 	    {{ end }}
 	</section>
     </main>

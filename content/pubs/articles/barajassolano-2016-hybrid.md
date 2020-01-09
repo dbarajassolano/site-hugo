@@ -7,6 +7,7 @@ volume  = "14"
 issue   = "4"
 DOI     = "10.1137/15M1022537"
 journal = "Multiscale Model. Simul."
+type    = "article"
 date    = "2017-04-11T11:41:29-07:00"
 
 [[author]]

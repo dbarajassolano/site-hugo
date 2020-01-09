@@ -12,7 +12,7 @@ deploy: site
 	$(NETLIFY) deploy --prod
 
 site:	clean
-	$(HUGO)
+	$(HUGO) --verbose
 
 clean:
 	rm -rf public/

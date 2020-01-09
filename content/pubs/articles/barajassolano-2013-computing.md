@@ -7,6 +7,7 @@ volume  = "3"
 issue   = "1"
 DOI     = "10.1615/Int.J.UncertaintyQuantification.2012003671"
 journal = "Int. J. Uncertain. Quantif."
+type    = "article"
 date    = "2017-04-11T07:41:29-07:00"
 
 [[author]]

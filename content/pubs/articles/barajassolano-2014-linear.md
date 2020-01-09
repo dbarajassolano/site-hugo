@@ -7,6 +7,7 @@ volume  = "51"
 issue   = "6"
 DOI     = "10.1002/2014WR016179"
 journal = "Water Resour. Res."
+type    = "article"
 date    = "2017-04-11T08:41:29-07:00"
 
 [[author]]

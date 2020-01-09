@@ -7,6 +7,7 @@ volume  = "4"
 issue   = "1"
 DOI     = "10.1137/130930108"
 date    = "2017-04-11T09:50:28-07:00"
+type    = "article"
 journal = "SIAM/ASA J. Uncert. Quantif."
 
 [[author]]
