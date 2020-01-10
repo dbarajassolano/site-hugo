@@ -3,5 +3,6 @@
     {{ range $i, $e := .Params.author }}{{ if $i }}, {{ end }} {{ if eq $i $len }}& {{ end }} {{ with .family }}{{ . }}, {{ end }} {{ .given }}{{ end }}
     ({{.Params.year}}).
     <a href="{{ .Permalink }}">{{ .Title }}</a>,
-    <em>arXiv preprint arXiv:{{ .Params.eprint }}</em>.
+    <em>{{ .Params.journal }}, {{ .Params.volume }}</em>{{ with .Params.issue }}({{.}}){{ end }},
+    {{ .Params.pages }}.
 </li>

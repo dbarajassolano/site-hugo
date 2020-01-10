@@ -7,8 +7,16 @@
 	    {{ .Content }}    
 	</section>
 	<section>
+	    <h2>Research interests</h2>
+	    <ul>
+		{{ range .Site.Taxonomies.topics }}
+		    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+		{{ end }}
+	    </ul>
+	</section>
+	<section>
 	    {{ range .Pages }}
-		{{ .Render "list" }}
+		{{ .Render "sublist" }}
 	    {{ end }}
 	</section>
     </main>

@@ -3,29 +3,42 @@ html {
 }
 
 body {
-    width: 80%;
+    max-width: 55em;
     padding: 20px;
     margin: 0 auto;
     font-family: 'IBM Plex Serif', serif;
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
-    margin: 2em 0 0 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5em;
+    margin: 1.8em 0 0 0;
+    font-weight: normal;
+}
+
+
+#article-title {
+    margin: 1.2em 0 0 0;
 }
 
 h2 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.2em;
     margin: 1.5em 0 0 0;
+    font-weight: normal;
 }
 
 li {
     margin: 0 0 1.0em 0;
 }
 
-#footer {
+footer {
     margin: 2.0em 0 0 0;
     font-size: 0.75em;
+}
+
+pre {
+    white-space: pre-wrap;
+    font-family: 'IBM Plex Mono', monospace;
 }
 

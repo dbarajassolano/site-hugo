@@ -1,0 +1,23 @@
+{{ define "title" }}
+    {{ .Title }}
+{{ end }}
+
+{{ define "main" }}
+    <main role="main">
+	<header>
+	    <a href="/">Back Home</a>
+	    <h1 id="article-title">{{ .Title }}</h1>
+	</header>
+	<section id="description">
+	    {{ .Content }}
+	</section>
+	<section>
+	    <h2>Relevant publications</h2>
+	    <ul>
+		{{ range .Pages }}
+		    {{ .Render "li" }}
+		{{ end }}
+	    </ul>
+	</section>
+    </main>
+{{ end }}

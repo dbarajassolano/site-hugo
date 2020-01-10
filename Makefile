@@ -5,14 +5,14 @@ NETLIFY=~/node_modules/netlify-cli/bin/run
 
 all:	deploy
 
-test: 	site
-	$(NETLIFY) deploy
-
 deploy: site
 	$(NETLIFY) deploy --prod
 
 site:	clean
 	$(HUGO) --verbose
+
+test: 	
+	$(HUGO) --verbose server
 
 clean:
 	rm -rf public/

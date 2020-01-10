@@ -1,8 +1,0 @@
-<li>
-    {{$len := len .Params.author | add -1 }}
-    {{ range $i, $e := .Params.author }}{{ if $i }}, {{ end }}{{ if eq $i $len }}& {{ end }}{{ .family }}, {{ .given }}{{ end }}
-    ({{.Params.year}}).
-    <a href="{{ .Permalink }}">{{ .Title }}</a>,
-    <em>{{ .Params.journal }}, {{ .Params.volume }}</em>{{ with .Params.issue }}({{.}}){{ end }},
-    {{ .Params.pages }}.
-</li>
