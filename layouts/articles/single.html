@@ -17,7 +17,7 @@
 	    <h2 id="BibTeX">BibTeX entry</h2>
 	    <pre><code>
 @article{ {{- .Params.id}},
-    title =     { {{ with .Params.textitle }}{{- . -}}{{ else }}{{- .Title -}}{{ end  }} },
+    title =     { { {{ with .Params.textitle }}{{- . -}}{{ else }}{{- .Title -}}{{ end  }} } },
     author =    { {{- range $i, $e := .Params.author }}{{if $i}} and {{end}}{{ with .family }}{{- . }}, {{ end }}{{ .given }}{{end -}} },
     journal =   { {{- .Params.journal -}} },
     volume =    { {{- .Params.volume -}} },{{ with .Params.issue }}
