@@ -11,3 +11,6 @@ public
 
 # Netlify configuration
 .netlify
+
+# Hugo
+.hugo_build.lock
