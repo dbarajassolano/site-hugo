@@ -3,6 +3,8 @@
 {{ end }}
 
 {{ define "main" }}
+{{ $journal := .Params.journal }}
+{{ $journal = replace $journal "&" "\\&" }}
     <main role="main">
 	<header>
 	    <a href="/">Back Home</a>
@@ -19,7 +21,7 @@
 @{{ if eq .Params.reftype "proceedings" }}inproceedings{{ else }}article{{ end }}{ {{- .Params.id}}, 
     title =     {{"{{"}}{{ with .Params.textitle }}{{- . -}}{{ else }}{{- .Title -}}{{ end  }}{{"}}"}},
     author =    { {{- range $i, $e := .Params.author }}{{if $i}} and {{end}}{{ with .family }}{{- . }}, {{ end }}{{ .given }}{{end -}} },
-    {{ if eq .Params.reftype "proceedings" }}booktitle ={{ else }}journal =  {{ end }} { {{- .Params.journal -}} },{{ if .Params.volume }}
+    {{ if eq .Params.reftype "proceedings" }}booktitle ={{ else }}journal =  {{ end }} { {{- $journal -}} },{{ if .Params.volume }}
     volume =    { {{- .Params.volume -}} },{{ with .Params.issue }}
     issue =     { {{- . -}} },{{ end }}{{ end }}
     pages =     { {{- .Params.pages -}} },

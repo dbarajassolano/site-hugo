@@ -1,5 +1,5 @@
 +++
-title   = "Highly-scalable, physics-informed GANs for learning solutions of stochastic PDEs"
+title   = "Highly-scalable, Physics-informed GANs for Learning Solutions of Stochastic PDEs"
 id      = "yang-2019-highly"
 reftype = "proceedings"
 year    = "2019"
