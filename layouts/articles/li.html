@@ -3,6 +3,6 @@
     {{ range $i, $e := .Params.author }}{{ if $i }}, {{ end }} {{ if eq $i $len }}& {{ end }} {{ with .family }}{{ . }}, {{ end }} {{ .given }}{{ end }}
     ({{.Params.year}}).
     <a href="{{ .Permalink }}">{{ .Title }}</a>,
-    <em>{{ .Params.journal }}, {{ .Params.volume }}</em>{{ with .Params.issue }}({{.}}){{ end }},
-    {{ .Params.pages }}.
+    <em>{{ .Params.journal }}, {{ if .Params.volume }} {{ .Params.volume }}{{ if not .Params.issue}},{{ end }}</em>{{ with .Params.issue }}({{.}}),{{ end }}{{ else }}</em>{{ end }}
+    {{ .Params.pages | .RenderString }}.
 </li>

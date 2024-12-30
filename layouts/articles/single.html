@@ -16,12 +16,12 @@
 	<section id="BibTeX">
 	    <h2 id="BibTeX">BibTeX entry</h2>
 	    <pre><code>
-@article{ {{- .Params.id}},
-    title =     { { {{ with .Params.textitle }}{{- . -}}{{ else }}{{- .Title -}}{{ end  }} } },
+@{{ if eq .Params.reftype "proceedings" }}inproceedings{{ else }}article{{ end }}{ {{- .Params.id}}, 
+    title =     {{"{{"}}{{ with .Params.textitle }}{{- . -}}{{ else }}{{- .Title -}}{{ end  }}{{"}}"}},
     author =    { {{- range $i, $e := .Params.author }}{{if $i}} and {{end}}{{ with .family }}{{- . }}, {{ end }}{{ .given }}{{end -}} },
-    journal =   { {{- .Params.journal -}} },
+    {{ if eq .Params.reftype "proceedings" }}booktitle ={{ else }}journal =  {{ end }} { {{- .Params.journal -}} },{{ if .Params.volume }}
     volume =    { {{- .Params.volume -}} },{{ with .Params.issue }}
-    issue =     { {{- . -}} },{{ end }}
+    issue =     { {{- . -}} },{{ end }}{{ end }}
     pages =     { {{- .Params.pages -}} },
     year =      { {{- .Params.year -}} },
     doi =       { {{- .Params.DOI -}} },
