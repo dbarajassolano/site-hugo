@@ -1,11 +1,11 @@
-+++
-title   = ""
-id      = ""
-journal = ""
-page    = ""
-volume  = ""
-issue   = ""
-year    = ""
-DOI     = ""
-date    = {{ .Date }}
-+++
+---
+title: ""
+id: ""
+journal: ""
+page: ""
+volume: ""
+issue: ""
+year: ""
+doi: ""
+date: {{ .Date }}
+---

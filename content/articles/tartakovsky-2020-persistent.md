@@ -2,7 +2,7 @@
 title: Explaining Persistent Incomplete Mixing in Multicomponent Reactive Transport with Eulerian Stochastic Model
 id: tartakovsky-2020-persistent
 year: 2020
-journal: Adv. Water. Resour.
+journal: Adv. Water Resour.
 volume: 145
 pages: 103729
 year: 2020

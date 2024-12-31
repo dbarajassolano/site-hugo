@@ -1,8 +1,8 @@
-+++
-title        = ""
-id           = ""
-eprint       = ""
-primaryClass = ""
-year         = ""
-date         = {{ .Date }}
-+++
+---
+title: ""
+id: ""
+eprint: ""
+primaryClass: ""
+year: ""
+date: {{ .Date }}
+---
