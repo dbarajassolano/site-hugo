@@ -2,7 +2,7 @@
 title   = "Computing green’s functions for flow in heterogeneous composite media"
 id      = "barajassolano-2013-computing"
 pages   = "39-46"
-year    = "2013"
+year    = 2013
 volume  = "3"
 issue   = "1"
 DOI     = "10.1615/Int.J.UncertaintyQuantification.2012003671"

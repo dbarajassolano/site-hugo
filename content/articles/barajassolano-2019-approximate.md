@@ -2,7 +2,7 @@
 title   = "Approximate Bayesian model inversion for PDEs with heterogeneous and state-dependent coefficients"
 id      = "barajassolano-2019-approximate"
 pages   = "247-262"
-year    = "2019"
+year    = 2019
 volume  = "395"
 DOI     = "10.1016/j.jcp.2019.06.010"
 date    = "2019-09-23T12:07:28-05:00"

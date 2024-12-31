@@ -2,7 +2,7 @@
 title   = "Hybrid Multiscale Finite Volume Method for Advection-Diffusion Equations Subject to Heterogeneous Reactive Boundary Conditions"
 id      = "barajassolano-2016-hybrid"
 pages   = "1341-1376"
-year    = "2016"
+year    = 2016
 volume  = "14"
 issue   = "4"
 DOI     = "10.1137/15M1022537"

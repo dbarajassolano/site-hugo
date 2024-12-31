@@ -2,7 +2,7 @@
 title   = "Probability and Cumulative Density Function Methods for the Stochastic Advection-Reaction Equation"
 id      = "barajassolano-2018-probability"
 pages   = "180-212"
-year    = "2018"
+year    = 2018
 volume  = "6"
 issue   = "1"
 DOI     = "10.1137/16M1109163"

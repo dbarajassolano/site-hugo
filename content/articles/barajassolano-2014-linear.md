@@ -2,7 +2,7 @@
 title   = "Linear functional minimization for inverse modeling"
 id      = "barajassolano-2014-linear"
 pages   = "4516-4531"
-year    = "2014"
+year    = 2014
 volume  = "51"
 issue   = "6"
 DOI     = "10.1002/2014WR016179"

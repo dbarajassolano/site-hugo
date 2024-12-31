@@ -2,7 +2,7 @@
 title   = "Stochastic Collocation Methods for Nonlinear Parabolic Equations with Random Coefficients"
 id      = "barajassolano-2016-stochastic"
 pages   = "475-494"
-year    = "2016"
+year    = 2016
 volume  = "4"
 issue   = "1"
 DOI     = "10.1137/130930108"

@@ -2,7 +2,7 @@
 title   = "Highly-scalable, Physics-informed GANs for Learning Solutions of Stochastic PDEs"
 id      = "yang-2019-highly"
 reftype = "proceedings"
-year    = "2019"
+year    = 2019
 journal = "2019 IEEE/ACM Third Workshop on Deep Learning on Supercomputers (DLS)"
 pages   = "1--11"
 DOI     = "10.1109/DLS49591.2019.00006"

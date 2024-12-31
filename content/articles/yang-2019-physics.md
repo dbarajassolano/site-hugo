@@ -2,7 +2,7 @@
 title   = "Physics-informed CoKriging: A Gaussian-process-regression-based multifidelity method for data-model convergence"
 id      = "yang-2019-physics"
 pages   = "410-431"
-year    = "2019"
+year    = 2019
 volume  = "395"
 DOI     = "10.1016/j.jcp.2019.06.041"
 date    = "2019-09-23T12:07:28-05:00"

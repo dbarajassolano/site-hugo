@@ -2,7 +2,7 @@
 title   = "Probabilistic Density Function Method for Stochastic ODEs of Power Systems with Uncertain Power Input"
 id      = "wang-2015-probabilistic"
 pages   = "873-896"
-year    = "2015"
+year    = 2015
 volume  = "3"
 issue   = "1"
 DOI     = "10.1137/130940050"

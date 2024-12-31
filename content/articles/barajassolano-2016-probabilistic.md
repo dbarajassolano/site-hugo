@@ -2,7 +2,7 @@
 title   = "Probabilistic density function method for nonlinear dynamical systems driven by colored noise"
 id      = "barajassolano-2016-probabilistic"
 pages   = "052121"
-year    = "2016"
+year    = 2016
 volume  = "93"
 issue   = "5"
 DOI     = "10.1103/PhysRevE.93.052121"

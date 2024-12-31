@@ -1,3 +1,4 @@
+{{/* -*- engine:go -*- */}}
 <li>
     {{$len := len .Params.author | add -1 }}
     {{ range $i, $e := .Params.author }}{{ if $i }}, {{ end }} {{ if eq $i $len }}& {{ end }} {{ with .family }}{{ . }}, {{ end }} {{ .given }}{{ end }}
