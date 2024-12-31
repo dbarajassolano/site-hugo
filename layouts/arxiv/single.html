@@ -1,3 +1,4 @@
+{{/* -*- engine:go -*- */}}
 {{ define "title" }}
     {{ .Title }}
 {{ end }}
@@ -16,8 +17,8 @@
 	<section id="BibTeX">
 	    <h2 id="BibTeX">BibTeX entry</h2>
 	    <pre><code>
-@article{ {{- .Params.id}},
-    title =         { {{ with .Params.textitle }}{{- . -}}{{ else }}{{- .Title -}}{{ end  }} },
+@misc{ {{- .Params.id}},
+    title =         {{"{{"}}{{ with .Params.textitle }}{{- . -}}{{ else }}{{- .Title -}}{{ end  }}{{"}}"}},
     author =        { {{- range $i, $e := .Params.author }}{{if $i}} and {{end}}{{ with .family }}{{- . }}, {{ end }}{{ .given }}{{end -}} },
     eprint =        { {{- .Params.eprint -}} },
     archivePrefix = {arxiv},

@@ -1,7 +1,8 @@
+{{/* -*- engine:go -*- */}}
 <div>
     <h2 id="title">{{ .Title }}</h2>
     <ul>
-	{{ range .Pages }}
+	{{ range (((.Pages.ByParam "title").Reverse).ByParam "year").Reverse }}
 	    {{ .Render "li"}}
 	{{ end }}
     </ul>

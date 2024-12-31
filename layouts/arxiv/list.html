@@ -1,3 +1,4 @@
+{{/* -*- engine:go -*- */}}
 {{ define "main" }}
     <main role="main">
 	<header>
@@ -5,7 +6,7 @@
 	</header>
 	<section>
 	    <ul>
-		{{ range .Pages }}
+		{{ range (((.Pages.ByParam "title").Reverse).ByParam "year").Reverse }}
 		    {{ .Render "li"}}
 		{{ end }}
 	    </ul>
