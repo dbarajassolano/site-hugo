@@ -3,4 +3,4 @@
 	command = "hugo --gc"
 
 [build.environment]
-	HUGO_VERSION = "0.110.0"
+	HUGO_VERSION = "0.139.4"

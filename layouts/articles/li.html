@@ -4,6 +4,5 @@
     {{ range $i, $e := .Params.author }}{{ if $i }}, {{ end }} {{ if eq $i $len }}& {{ end }} {{ with .family }}{{ . }}, {{ end }} {{ .given }}{{ end }}
     ({{.Params.year}}).
     <a href="{{ .Permalink }}">{{ .Title }}</a>,
-    <em>{{ .Params.journal }}, {{ if .Params.volume }} {{ .Params.volume }}{{ if not .Params.issue}},{{ end }}</em>{{ with .Params.issue }}({{.}}),{{ end }}{{ else }}</em>{{ end }}
-    {{ .Params.pages | .RenderString }}.
+    <em>{{ .Params.journal }}</em>{{ if .Params.volume }}, <em>{{ .Params.volume }}</em>{{ if .Params.issue }}({{ .Params.issue }}){{ end }}{{ end }}{{ if .Params.pages }}, {{ .Params.pages | .RenderString }}{{ end }}.
 </li>

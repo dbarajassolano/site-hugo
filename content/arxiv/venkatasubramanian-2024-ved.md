@@ -1,9 +1,9 @@
 ---
 author:
 - family: Venkatasubramanian
-  given: Subashree
+  given: S.
 - family: Barajas-Solano
-  given: David A.
+  given: D. A.
 doi: 10.48550/arXiv.2412.05175
 id: venkatasubramanian-2024-ved
 title: Variational Encoder-Decoders for Learning Latent Representations of Physical Systems
