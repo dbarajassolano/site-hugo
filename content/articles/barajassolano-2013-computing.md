@@ -1,5 +1,5 @@
 +++
-title   = "Computing green’s functions for flow in heterogeneous composite media"
+title   = "Computing Green’s Functions for Flow in Heterogeneous Composite Media"
 id      = "barajassolano-2013-computing"
 pages   = "39-46"
 year    = 2013

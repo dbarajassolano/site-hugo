@@ -1,5 +1,5 @@
 +++
-title   = "Probabilistic density function method for nonlinear dynamical systems driven by colored noise"
+title   = "Probabilistic Density Function Method for Nonlinear Dynamical Systems Driven by Colored Noise"
 id      = "barajassolano-2016-probabilistic"
 pages   = "052121"
 year    = 2016

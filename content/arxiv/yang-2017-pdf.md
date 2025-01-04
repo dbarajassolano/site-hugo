@@ -1,5 +1,5 @@
 +++
-title        = "PDF estimation for power grid systems via sparse regression"
+title        = "PDF Estimation for Power Grid Systems via Sparse Regression"
 id           = "yang-2017-pdf"
 eprint       = "1708.08378"
 primaryClass = "stat.AP"

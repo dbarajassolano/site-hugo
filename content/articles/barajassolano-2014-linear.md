@@ -1,5 +1,5 @@
 +++
-title   = "Linear functional minimization for inverse modeling"
+title   = "Linear Functional Minimization for Inverse Modeling"
 id      = "barajassolano-2014-linear"
 pages   = "4516-4531"
 year    = 2014

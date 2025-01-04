@@ -1,5 +1,5 @@
 +++
-title   = "Approximate Bayesian model inversion for PDEs with heterogeneous and state-dependent coefficients"
+title   = "Approximate Bayesian Model Inversion for PDEs with Heterogeneous and State-dependent Coefficients"
 id      = "barajassolano-2019-approximate"
 pages   = "247-262"
 year    = 2019
