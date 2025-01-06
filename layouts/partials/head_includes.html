@@ -1,3 +1,4 @@
+{{/* -*- engine:go -*- */}}
+{{ $styles := resources.Get "css/styles.css" | minify | fingerprint }}
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif|IBM+Plex+Sans|IBM+Plex+Mono&display=swap" rel="stylesheet">
-<link href="/css/styles.css" rel="stylesheet">
-
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" type="text/css" media="screen" integrity="{{ $styles.Data.Integrity }}">
